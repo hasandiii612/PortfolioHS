@@ -1,4 +1,5 @@
 import { Github, Linkedin } from 'lucide-react';
+import contactImage from '../assets/final.jpg'; // ✅ adjust path if needed
 
 const Contact = () => {
     return (
@@ -13,7 +14,7 @@ const Contact = () => {
 
                 {/* Right Image */}
                 <div className="mt-6">
-                    <img src="/final.jpg" alt="Image" />
+                    <img src={contactImage} alt="Hasandí Seelarathne" />
                 </div>
             </div>
 
