@@ -8,29 +8,30 @@ const Projects = () => {
             description: `A child-friendly mobile application designed to teach good manners and life skills through AI-generated stories, interactive quizzes, and engaging animations. The app personalizes storytelling based on children's interests and features real-time Text-to-Speech (TTS) narration with voice variations. The project follows an Agile development process, ensuring a seamless and immersive learning experience for children aged 3-7 years.`,
             image: 'brightkids.png',
             technologies: ['Python (Flask)', 'Flutter', 'Firebase'],
-            githubUrl: 'https://github.com/hasandiii612'
+            githubUrl: 'https://github.com/hasandiii612',
+            liveUrl: 'https://github.com/yohanl3/SDGP_Project.git'
+            
         },
         {
             title: 'Real Time Ticketing System',
             description: `Designed and implemented a multi-threaded ticketing system using Java (Spring Boot) to simulate and handle the Producer-Consumer problem. Ensured synchronized ticket distribution with priority-based retrieval, vendor variations, and periodic ticket statistics reporting.`,
             image: 'tickets.png',
             technologies: ['Java (Spring Boot)', 'React.js'],
-            githubUrl: 'https://github.com/hasandiii612'
+            githubUrl: 'https://github.com/hasandiii612/TicketingSystem.git'
         },
         {
             title: 'DizBot',
             description: `Developed Dizbot, an AI-powered Discord bot with a web dashboard. Users can log in via Discord OAuth2, manage bot commands, automate moderation, and fetch real-time server stats.`,
             image: 'bot.png',
             technologies: ['Python', 'React.js'],
-            githubUrl: 'https://github.com/hasandiii612'
+            githubUrl: 'https://github.com/hasandiii612/DizBot.git'
         },
         {
             title: 'Reflekt [Ongoing]',
-            description: `AI-assisted web-based journaling platform that allows users to securely write and manage journal entries. It includes authentication, CRUD operations, and future integration with AI features like sentiment analysis or journaling prompts.
-`,
+            description: `AI-assisted web-based journaling platform that allows users to securely write and manage journal entries. It includes authentication, CRUD operations, and future integration with AI features like sentiment analysis or journaling prompts.`,
             image: 'journal.png',
             technologies: ['Node.js', 'Express.js','React (Vite)', 'Supabase PostgreSQL'],
-            githubUrl: 'https://github.com/hasandiii612'
+            githubUrl: 'https://github.com/DinilJayasuriya/Reflekt.git'
         },
         {
             title: 'Krafted',
@@ -44,8 +45,10 @@ const Projects = () => {
             description: `BrightKids is an AI-powered educational platform designed to make learning joyful, interactive, and personalized for children aged 3 to 7 years. The marketing website serves as the main gateway to attract parents, educators, and investors by showcasing the vision, features, and benefits of the BrightKids app.`,
             image: 'website.png',
             technologies: ['React (Vite)/ Tailwind CSS'],
-            githubUrl: 'https://github.com/hasandiii612'
+            githubUrl: 'https://github.com/hasandiii612',
+            liveUrl: 'https://www.brightkidsapp.com/'
         },
+
         {
             title: 'Plane Seat Management System',
             description: `The Plane Seat Management System was built to simulate and manage seat bookings on a flight using Java. The system allows users to view, book, cancel, and manage passenger seat assignments efficiently in a console-based interface.`,
@@ -87,9 +90,12 @@ const Projects = () => {
                 <div className="overflow-x-auto scrollbar-hide">
                     <div className="flex gap-6 w-max snap-x snap-mandatory">
                         {projects.map((project, index) => (
-                            <motion.div
+                            <motion.a
                                 key={index}
-                                className="bg-neutral-900 rounded-lg overflow-hidden w-[350px] flex-shrink-0 shadow-md snap-start"
+                                href={project.liveUrl || '#'}
+                                target={project.liveUrl ? '_blank' : '_self'}
+                                rel="noopener noreferrer"
+                                className="bg-neutral-900 rounded-lg overflow-hidden w-[350px] flex-shrink-0 shadow-md snap-start hover:ring-2 hover:ring-white transition"
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -115,8 +121,8 @@ const Projects = () => {
                                                 key={techIndex}
                                                 className="px-3 py-1 bg-neutral-800 rounded-full text-xs text-neutral-300"
                                             >
-                        {tech}
-                      </span>
+                                                {tech}
+                                            </span>
                                         ))}
                                     </div>
 
@@ -130,7 +136,7 @@ const Projects = () => {
                                         <span>View on GitHub</span>
                                     </a>
                                 </div>
-                            </motion.div>
+                            </motion.a>
                         ))}
                     </div>
                 </div>
