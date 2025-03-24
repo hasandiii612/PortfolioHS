@@ -1,5 +1,5 @@
 import { Github, Linkedin } from 'lucide-react';
-import contactImage from '../assets/final.jpg'; // ✅ adjust path if needed
+import contactImage from '../assets/final.jpg';
 
 const Contact = () => {
     return (
