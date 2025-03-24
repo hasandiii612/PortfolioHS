@@ -13,7 +13,7 @@ const Contact = () => {
 
                 {/* Right Image */}
                 <div className="mt-6">
-                    <img src="/final.jpg" alt="Hasandí Seelarathne" />
+                    <img src="/final.jpg" alt="Image" />
                 </div>
             </div>
 
