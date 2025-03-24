@@ -6,10 +6,10 @@ const Hero = () => {
   return (
       <section
           id="hero"
-          className="bg-black text-white min-h-screen flex items-center justify-center px-6 md:px-24 relative"
+          className="bg-black text-white min-h-screen flex items-center justify-center px-6 md:px-24 relative overflow-hidden"
       >
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 transform -translate-y-10">
           <img
               src={setupImage}
               alt="workspace"
