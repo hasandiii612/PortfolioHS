@@ -1,4 +1,4 @@
-
+import { Github, Linkedin } from 'lucide-react';
 
 const Contact = () => {
     return (
@@ -6,21 +6,19 @@ const Contact = () => {
             <div className="grid md:grid-cols-2 gap-10 items-center">
                 {/* Left Text Section */}
                 <div>
-                    <h2 className="text-4xl md:text-5xl font-light mb-2">Let's work</h2>
-                    <h2 className="italic text-4xl md:text-5xl font-light">together</h2>
+                    <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-4">
+                        Let&apos;s work <span className="italic">together</span>
+                    </h2>
                 </div>
 
-                <div>
-                    <img
-                        src="/profile.png"
-                        alt="workspace"
-                        className="rounded-xl w-full object-cover"
-                    />
+                {/* Right Image */}
+                <div className="mt-6">
+                    <img src="/final.jpg" alt="Hasandí Seelarathne" />
                 </div>
             </div>
 
             {/* Contact Info */}
-            <div className="grid md:grid-cols-2 gap-10 mt-12 border-t border-gray-700 pt-8 text-sm md:text-base">
+            <div className="grid md:grid-cols-2 gap-10 mt-12 text-sm md:text-base">
                 <div className="space-y-8">
                     <div>
                         <p className="text-gray-400 uppercase tracking-widest">Address</p>
@@ -33,6 +31,27 @@ const Contact = () => {
                     <div>
                         <p className="text-gray-400 uppercase tracking-widest">Email</p>
                         <p>hasandi123cs@gmail.com</p>
+                    </div>
+                    <div>
+                        <p className="text-gray-400 uppercase tracking-widest">Connect</p>
+                        <div className="flex gap-6 mt-2">
+                            <a
+                                href="https://github.com/hasandiii612"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-gray-300 transition"
+                            >
+                                <Github size={24} />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/hasandi-seelarathne"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-gray-300 transition"
+                            >
+                                <Linkedin size={24} />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

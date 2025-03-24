@@ -23,7 +23,7 @@ const Education = () => {
     },
     {
       period: '2024 - ',
-      institution: 'Chartered Institute of Management Accountants',
+      institution: 'Chartered Institute of Management Accountants (CIMA)',
       description:'Reading',
       details: 'Curently reading for the Certificate Level of CIMA as a part time student'
     }
