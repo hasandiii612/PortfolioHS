@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import setupImage from '../assets/setup.jpg';
+import hasandiImg from '../assets/hasandi.jpg';
 
 const Hero = () => {
   return (
@@ -9,7 +11,7 @@ const Hero = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-              src="/setup.jpg"
+              src={setupImage}
               alt="workspace"
               className="w-full h-full object-cover"
           />
@@ -54,7 +56,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
           >
             <img
-                src="/hasandi.jpg"
+                src={hasandiImg}
                 alt="Hasandí Seelarathne"
                 className="w-full h-full object-cover rounded-full shadow-2xl hover:scale-105 transition-transform duration-500"
             />
