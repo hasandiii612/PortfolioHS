@@ -5,7 +5,7 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
-import CustomCursor from './components/CustomCursor'; // Import the CustomCursor component
+import CustomCursor from './components/CustomCursor';
 
 function App() {
     return (
