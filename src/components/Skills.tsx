@@ -1,5 +1,5 @@
-
 import { motion } from 'framer-motion';
+import animationBg from '../assets/animation_4.gif'; // Import the GIF
 
 const Skills = () => {
   const programmingLanguages = [
@@ -24,10 +24,20 @@ const Skills = () => {
   ];
 
   return (
-      <section id="skills" className="py-20 bg-black text-white font-tektur">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 ">
+      <section id="skills" className="py-20 bg-black text-white font-tektur relative overflow-hidden">
+        {/* GIF Background with Overlay */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <img
+              src={animationBg}
+              alt="Animated background"
+              className="w-full h-full object-cover pointer-events-none"
+          />
+          <div className="absolute inset-0 bg-black opacity-70" />
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.h2
-              className="text-4xl sm:text-5xl font-tomorrow mb-16 text-center  "
+              className="text-4xl sm:text-5xl font-tomorrow mb-16 text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

@@ -1,0 +1,110 @@
+* {
+    cursor: none !important;
+}
+
+
+/*!* Hide the default cursor *!*/
+/*html, body, a, button, input, [role="button"] {*/
+/*    cursor: none !important;*/
+/*}*/
+
+.cursor-ring {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 999999;
+    transition: all 0.15s ease-out;
+    animation: cursorAnim 0.5s infinite alternate;
+    /* Add glow effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.cursor-dot {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: rosybrown;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 999999;
+    transition: all 0.08s ease-out;
+    /* Add glow effect */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Animation for the ring */
+@keyframes cursorAnim {
+    from {
+        width: 30px;
+        height: 30px;
+    }
+    to {
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
+        0 0 25px rgba(255, 255, 255, 0.4),
+        0 0 35px rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* When clicking */
+.cursor-ring--clicked {
+    border: 2px solid rgba(255, 255, 255, 1);
+    transform: translate(-50%, -50%) scale(0.75);
+    animation: none;
+    /* Intensify glow when clicked */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+    0 0 30px rgba(255, 255, 255, 0.6),
+    0 0 45px rgba(255, 255, 255, 0.4);
+}
+
+.cursor-dot--clicked {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: rgba(255, 255, 255, 1);
+    /* Intensify glow when clicked */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1),
+    0 0 20px rgba(255, 255, 255, 0.8),
+    0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+/* When hovering over links */
+.cursor-ring--hover {
+    width: 50px;
+    height: 50px;
+    border-color: rgba(255, 255, 255, 1);
+    animation: none;
+    /* Special glow for hover state */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+    0 0 30px rgba(255, 255, 255, 0.5),
+    0 0 45px rgba(255, 255, 255, 0.3);
+}
+
+.cursor-dot--hover {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    /* Special glow for hover state */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
+    0 0 20px rgba(255, 255, 255, 0.7),
+    0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+/* Disable on mobile */
+@media (max-width: 768px) {
+    * {
+        cursor: auto !important;
+    }
+
+    .cursor-ring, .cursor-dot {
+        display: none;
+    }
+}
