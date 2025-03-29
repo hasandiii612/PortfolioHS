@@ -3,11 +3,11 @@ import contactImage from '../assets/final.jpg';
 
 const Contact = () => {
     return (
-        <section id="contact" className="text-white bg-black py-16 px-6 md:px-24">
+        <section id="contact" className="text-white bg-black py-16 px-6 md:px-24 font-tektur">
             <div className="grid md:grid-cols-2 gap-10 items-center">
                 {/* Left Text Section */}
                 <div>
-                    <h2 className="text-4xl md:text-5xl font-serif font-semibold mb-4">
+                    <h2 className="text-4xl md:text-5xl font-tomorrow font-semibold mb-4">
                         Let&apos;s work <span className="italic">together</span>
                     </h2>
                 </div>
@@ -27,7 +27,7 @@ const Contact = () => {
                     </div>
                     <div>
                         <p className="text-gray-400 uppercase tracking-widest">Phone</p>
-                        <p>(94) 777 814 367</p>
+                        <p>(+94) 777 814 367</p>
                     </div>
                     <div>
                         <p className="text-gray-400 uppercase tracking-widest">Email</p>

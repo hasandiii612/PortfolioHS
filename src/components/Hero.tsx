@@ -1,12 +1,15 @@
 import { motion } from 'framer-motion';
 import setupImage from '../assets/setup.jpg';
-import hasandiImg from '../assets/hasandi.jpg';
+import hasandiImg from '../assets/Hasandi_CS.png';
+import logo from '../assets/HASANDILogo.png';
+import { Link as ScrollLink } from 'react-scroll';
+
 
 const Hero = () => {
   return (
       <section
           id="hero"
-          className="bg-black text-white min-h-screen flex items-center justify-center px-6 md:px-24 relative overflow-hidden"
+          className="bg-black text-white min-h-screen flex items-center justify-center px-0 md:px-0 relative overflow-hidden"
       >
         {/* Background Image */}
         <div className="absolute inset-0 z-0 transform -translate-y-10">
@@ -15,23 +18,49 @@ const Hero = () => {
               alt="workspace"
               className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black opacity-70" />
+          <div className="absolute inset-0 bg-black opacity-70"/>
         </div>
 
-        {/* Foreground Content */}
+        {/* Logo top left with animation */}
+        <motion.div
+            className="absolute top-6 left-[-160px] z-20"
+            initial={{opacity: 0, y: -20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.8}}
+        >
+          <ScrollLink
+              to="hero"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="block cursor-pointer transition-all duration-300 hover:scale-105 hover:brightness-110"
+          >
+            <img
+                src={logo}
+                alt="Logo"
+                className="w-[450px] h-auto md:w-[600px] object-contain"
+            />
+          </ScrollLink>
+
+        </motion.div>
+
+
+        {/* Rest of the component remains the same */}
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl gap-12">
           {/* Left: Name + Paragraph + Button */}
           <motion.div
-              className="max-w-xl mt-12 md:mt-24"
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              className="max-w-xl mt-12 md:mt-24 ml-6 md:ml-4"
+              initial={{opacity: 0, x: -30}}
+              animate={{opacity: 1, x: 0}}
+              transition={{duration: 0.8}}
           >
-            <h1 className="text-6xl md:text-8xl italic font-light font-serif tracking-wide mb-6 whitespace-nowrap">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold font-tektur tracking-wide mb-6">
               Hasandí Seelarathne
             </h1>
 
-            <p className="mt-4 text-base md:text-lg text-gray-200 font-light leading-relaxed">
+
+            <p className="mt-4 text-base md:text-lg text-gray-200 font-light leading-relaxed font-tomorrow">
               A passionate developer and designer specializing in creating intuitive, engaging,
               and seamless digital experiences by blending design with functionality.
             </p>
@@ -41,7 +70,8 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-              <button className="mt-8 flex items-center gap-2 bg-transparent border border-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition duration-300">
+              <button
+                  className="mt-8 flex items-center gap-2 bg-transparent border border-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition duration-300 font-tomorrow">
                 <span>Let's Connect</span>
                 <span className="text-lg">→</span>
               </button>
@@ -49,8 +79,9 @@ const Hero = () => {
           </motion.div>
 
           {/* Right: Circular Profile Image */}
+          {/* Right: Circular Profile Image */}
           <motion.div
-              className="w-56 h-56 md:w-72 md:h-72"
+              className="w-[420px] h-[420px] md:w-[480px] md:h-[480px] lg:w-[520px] lg:h-[520px] mt-8 ml-8 md:ml-16"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -61,6 +92,7 @@ const Hero = () => {
                 className="w-full h-full object-cover rounded-full shadow-2xl hover:scale-105 transition-transform duration-500"
             />
           </motion.div>
+
         </div>
       </section>
   );

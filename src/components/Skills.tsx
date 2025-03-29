@@ -24,10 +24,10 @@ const Skills = () => {
   ];
 
   return (
-      <section id="skills" className="py-20 bg-black text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="skills" className="py-20 bg-black text-white font-tektur">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <motion.h2
-              className="text-4xl sm:text-5xl font-serif mb-16 text-center"
+              className="text-4xl sm:text-5xl font-tomorrow mb-16 text-center  "
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
